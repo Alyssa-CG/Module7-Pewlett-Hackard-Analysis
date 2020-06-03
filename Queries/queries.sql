@@ -149,3 +149,57 @@ INNER JOIN dept_employees AS de
 ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
+
+-- SKILL DRILL: Create a query that will return only the information relevant to the Sales team. The requested list includes:
+
+-- Employee numbers
+-- Employee first name
+-- Employee last name
+-- Employee department name
+-- The info is in retirement_info and dept_emp
+-- Done below, 5,252 current employees in the sales dept may retire soon.
+
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	de.dept_no	
+FROM retirement_info as ri
+	INNER JOIN dept_employees AS de
+		ON (ri.emp_no = de.emp_no)
+WHERE (de.to_date = '9999-01-01')
+AND (de.dept_no = 'd007');
+
+SELECT * FROM retirement_info
+SELECT * FROM dept_employees
+SELECT * FROM departments
+
+-- SKILL DRILL: Create another query that will return the following information for the Sales and Development teams:
+
+-- Employee numbers
+-- Employee first name
+-- Employee last name
+-- Employee department name
+
+-- Hint: You’ll need to use the IN condition with the WHERE clause. See the PostgreSQL documentation (Links to an external site.) for additional information.
+-- Without WHERE, IN, 13,613 current, retiring employees in either sales or devt.
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	de.dept_no	
+FROM retirement_info as ri
+	INNER JOIN dept_employees AS de
+		ON (ri.emp_no = de.emp_no)
+WHERE (de.to_date = '9999-01-01')
+AND ((de.dept_no = 'd007') OR de.dept_no = 'd005');
+
+-- Using WHERE, IN: 13,613 employees.
+
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	de.dept_no	
+FROM retirement_info as ri
+	INNER JOIN dept_employees AS de
+		ON (ri.emp_no = de.emp_no)
+WHERE (de.to_date = '9999-01-01')
+AND de.dept_no IN ('d005', 'd007');
