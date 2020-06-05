@@ -21,8 +21,8 @@ hire_date date\
 \
 Dept_Employees\
 -\
-emp_no int pk fk - Employees.emp_no\
-dept_no varchar pk fk - Departments.dept_no\
+emp_no int pk fk >- Employees.emp_no\
+dept_no varchar pk fk >- Departments.dept_no\
 from_date date\
 to_date date\
 \
@@ -42,8 +42,25 @@ to_date date\
 \
 Titles\
 -\
-emp_no int pk fk - Employees.emp_no\
+emp_no int pk fk >- Employees.emp_no\
 title varchar pk\
 from_date date\
 to_date date\
-}
+\
+Retiring_Titles\
+-\
+emp_no int pk fk - Employees.emp_no\
+first_name varchar\
+last_name varchar\
+title varchar fk >- Titles.title\
+from_date date\
+salary int\
+\
+Mentorship_Eligibility\
+-\
+emp_no int pk fk - Employees.emp_no\
+first_name varchar\
+last_name varchar\
+title varchar fk >- Titles.title\
+from_date date\
+to_date date}

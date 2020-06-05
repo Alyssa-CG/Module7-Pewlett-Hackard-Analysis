@@ -285,4 +285,44 @@ FROM
    FROM retiring_titles
   ) tmp WHERE rn = 1
  ORDER BY emp_no;
- 
+
+ -- CHALLENGE Table 2: Mentorship Eligibility
+
+-- 1) A table of retiring employees eligible for mentorship.
+
+-- CHALLENGE Table 2: Mentorship Eligibility
+-- Must be a current, retiring employee with a birthdate in 1965
+
+
+-- TWO TABLES WERE CREATED AS INSTRUCTIONS WERE UNCLEAR.
+-- 1) A table of current employees born in 1965.
+
+SELECT e.emp_no,
+	e.first_name,
+	e.last_name,
+	t.title,	
+	t.from_date,
+	t.to_date
+FROM employees as e
+	INNER JOIN titles AS t
+		ON (e.emp_no = t.emp_no)
+		WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+		AND (t.to_date = '9999-01-01');
+-- Based on this query, 1,549 current employees would be eligible for the mentorship program.
+
+-- A table of employees from within the previously identified retiring group, born in 1955.
+SELECT rt.emp_no,
+	rt.first_name,
+	rt.last_name,
+	t.title,	
+	t.from_date,
+	t.to_date
+INTO mentorship_eligibility
+FROM retiring_titles_unique AS rt
+	INNER JOIN titles AS t
+		ON (rt.emp_no = t.emp_no)
+	INNER JOIN employees AS e
+		ON (rt.emp_no = e.emp_no)
+		WHERE (e.birth_date BETWEEN '1955-01-01' AND '1955-12-31')
+		AND (t.to_date = '9999-01-01');
+-- Based on this query, 8,475 eligible for mentorship.		
