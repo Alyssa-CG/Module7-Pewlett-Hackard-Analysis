@@ -35,7 +35,7 @@ With this code, I joined the retiring_titles_unique table with the titles table 
 
 Out of curiosity, I did still check how many current employees were born in 1965, by joining the employees and titles tables, then filtering for current employees (end date 9999-01-01) born in 1965 and found only 1,549 persons within those categories. The code for this query can be found [near the end, here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql).
 
-Full code for only the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql), full code for table joins and queries written throughout this module was copied to [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/queries.sql) and all "create table" SQL are compiled [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/createtable.txt).
+Full code for only the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql), full code for table joins and queries written throughout this module was copied to [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/queries.sql) and all final "create table" schema SQL are compiled [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/final_schema.sql).
 
 ## Results
 
