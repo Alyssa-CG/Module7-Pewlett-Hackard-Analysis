@@ -9,7 +9,7 @@ Pewlett Hackard (PH), a huge company, needs to know how many of its employees ar
 To begin, the data was separated into six csv files, so relationships between the data was visualised by creating an Entity Relationship Diagram (ERD). The ERD was updated to include the new csv files created for the challenge but is included below.
 
 #### Entity Relationship Diagram for Pewlett Hackard's Employee Data
-![ERD]()
+![ERD](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/ChallengeEmployeeDB.png)
 
 Then, a database with all available employee-related information from the company was created in PostgreSQL. Next, pgAdmin was used to import, consolidate, filter and export data for our needs. The first challenge encountered along the way was compatibility issues with the software and available operating system, which took some uninstalling and reinstalling of different versions before pgAdmin imports and exports would function. After that, the data processing was straightforward until the challenge.
 
@@ -35,6 +35,8 @@ With this code, I joined the retiring_titles_unique table with the titles table 
 
 Out of curiosity, I did still check how many current employees were born in 1965, by joining the employees and titles tables, then filtering for current employees (end date 9999-01-01) born in 1965 and found only 1,549 persons within those categories.
 
+Full code for the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql).
+
 ## Results
 
 There were 33,118 retirement-ready PH employees. 
@@ -43,4 +45,4 @@ The number of individuals being hired was not discussed, and no data was provide
 
 Based on the assumption that mentorship-eligible employees were born in 1955, there would be 8,475 eligible employees.
 
-Further analysis on this data set could include an evaluation of which departments would be most affected by the "silver tsunami", the potentialy significant number of retiring employees.
+Further analysis on this data set could include an evaluation of which departments would be most affected by the "silver tsunami", the potentialy significant number of retiring employees. This would help the company plan where best to prioritise their mentoring and rehiring efforts.
