@@ -35,7 +35,7 @@ With this code, I joined the retiring_titles_unique table with the titles table 
 
 Out of curiosity, I did still check how many current employees were born in 1965, by joining the employees and titles tables, then filtering for current employees (end date 9999-01-01) born in 1965 and found only 1,549 persons within those categories. The code for this query can be found [near the end, here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql).
 
-Full code for only the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql) and full code for all queries written throughout this module, including table schemas, was copied to [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/queries.sql).
+Full code for only the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql), full code for table joins and queries written throughout this module was copied to [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/queries.sql) and all "create table" SQL are compiled [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/createtable.txt).
 
 ## Results
 
@@ -43,6 +43,6 @@ There were 33,118 retirement-ready PH employees.
 
 The number of individuals being hired was not discussed, and no data was provided on the topic, but a reasonable estimate would be up to 33,118 individuals, possibly less if retiring employees instead opt to stay to mentor new employees. The number of employees being hired may also be affected by a number of other factors, including the natural change of job responsibilities and company needs over time, the number of persons leaving the company for other reasons and growth or shrinkage of the company or branch.
 
-Based on the assumption that mentorship-eligible employees were born in 1955, there would be 8,475 eligible employees.
+Based on the assumption that mentorship-eligible employees were born in 1955, there would be 8,475 employees eligible for the mentorship program.
 
 Further analysis on this data set could include an evaluation of which departments would be most affected by the "silver tsunami", the potentialy significant number of retiring employees. This would help the company plan where best to prioritise their mentoring and rehiring efforts.
