@@ -6,7 +6,7 @@ Pewlett Hackard (PH), a huge company, needs to know how many of its employees ar
 
 ## Summary and Challenges
 
-To begin, the data was separated into six csv files, so relationships between the data was visualised by creating an Entity Relationship Diagram (ERD). The ERD was updated to include the new csv files created for the challenge but is included below.
+To begin, the data was separated into six csv files, so relationships between the data was visualised by creating an Entity Relationship Diagram (ERD). The ERD was updated to include the new csv files created for the challenge and included below.
 
 #### Entity Relationship Diagram for Pewlett Hackard's Employee Data
 ![ERD](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/ChallengeEmployeeDB.png)
@@ -33,9 +33,9 @@ If the mentorship program candidates must come from the results of the first tab
 				
 With this code, I joined the retiring_titles_unique table with the titles table to get the data from the requested columns. I did a second inner join on employees so that I would be able to filter by birth_date, and I still filtered by to_date to ensure I only pulled current employees. As the retiring_title_unique table had unique empoyee numbers (emp_no), the results of the join were also unique (which was still verified). I saved the output from this join into a table, which I then exported to a csv file.
 
-Out of curiosity, I did still check how many current employees were born in 1965, by joining the employees and titles tables, then filtering for current employees (end date 9999-01-01) born in 1965 and found only 1,549 persons within those categories.
+Out of curiosity, I did still check how many current employees were born in 1965, by joining the employees and titles tables, then filtering for current employees (end date 9999-01-01) born in 1965 and found only 1,549 persons within those categories. The code for this query can be found [near the end, here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql).
 
-Full code for the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql).
+Full code for only the final tables 1 and 2 can be found [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/Challenge%20Tables.sql) and full code for all queries written throughout this module, including table schemas, was copied to [here](https://github.com/Alyssa-CG/Module7-Pewlett-Hackard-Analysis/blob/master/Challenge/queries.sql).
 
 ## Results
 
