@@ -16,21 +16,21 @@ Then, a database with all available employee-related information from the compan
 Trying to discern exactly what the challenge activity was asking was difficult, as it did appear to have errors. We had determined throughout this module that the employees eligible for retirement were those born between 1952 and 1955 and hired between 1985 and 1988, which made it odd to consider employees born in 1965 for mentorship. The number of individuals being hired was not discussed, and no data was provided on the topic.
 
 If the mentorship program candidates must come from the results of the first table generated for this challenge, that is, if they must be part of the retirement-ready employees, then I believe the mentorship program candidates should be those born in 1955 not 1965. To determine mentorship eligibility, I used the following query:  
-<br />        SELECT rt.emp_no,  
-<br />	        rt.first_name,  
-<br />	        rt.last_name,  
-<br />        	t.title,  
-<br />        	t.from_date,  
-<br />	        t.to_date  
-<br />        INTO mentorship_eligibility  
-<br />        FROM retiring_titles_unique AS rt  
-<br />	        INNER JOIN titles AS t  
-<br />		        ON (rt.emp_no = t.emp_no)  
-<br />        	INNER JOIN employees AS e  
-<br />		        ON (rt.emp_no = e.emp_no)  
-<br />        		WHERE (e.birth_date BETWEEN '1955-01-01' AND '1955-12-31')  
-<br />        		AND (t.to_date = '9999-01-01');  
-
+        SELECT rt.emp_no,  
+	        rt.first_name,  
+	        rt.last_name,  
+        	t.title,  
+        	t.from_date,  
+	        t.to_date  
+        INTO mentorship_eligibility  
+        FROM retiring_titles_unique AS rt  
+	        INNER JOIN titles AS t  
+		        ON (rt.emp_no = t.emp_no)  
+        	INNER JOIN employees AS e  
+		        ON (rt.emp_no = e.emp_no)  
+        		WHERE (e.birth_date BETWEEN '1955-01-01' AND '1955-12-31')  
+        		AND (t.to_date = '9999-01-01');  
+				
 With this code, I joined the retiring_titles_unique table with the titles table to get the data from the requested columns. I did a second inner join on employees so that I would be able to filter by birth_date, and I still filtered by to_date to ensure I only pulled current employees. As the retiring_title_unique table had unique empoyee numbers (emp_no), the results of the join were also unique (which was still verified). I saved the output from this join into a table, which I then exported to a csv file.
 
 Out of curiosity, I did still check how many current employees were born in 1965, by joining the employees and titles tables, then filtering for current employees (end date 9999-01-01) born in 1965 and found only 1,549 persons within those categories.
